@@ -10,7 +10,8 @@ function login_error_message( $error ) {
     /**
      * prepare the error message to be displayed for the admin
      */
-    $error = sprintf( ucwords( str_replace( '_', ' ', $errors->get_error_code() ) ), '%s' );
+    $wpb_error = ucwords( str_replace( '_', ' ', $errors->get_error_code() ) );
+    $error = __( $wpb_error, 'textdomain' );
     if( $errors->get_error_code() ) {
         $error;
     }
