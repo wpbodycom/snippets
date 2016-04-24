@@ -8,7 +8,7 @@ function login_error_message( $error ) {
      */
     global $errors;
     /**
-     * prepare the error message to be displayed for the admin
+     * Prepare the error message that will be displayed for admin
      */
     $wpb_error = ucwords( str_replace( '_', ' ', $errors->get_error_code() ) );
     $error = __( $wpb_error, 'textdomain' );
