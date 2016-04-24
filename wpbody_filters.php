@@ -1,14 +1,8 @@
 <?php
 
-/**
- * Class for filters
- */
-class WPbody_Class_Filter() {
-    
-    public function __construct() {
-        add_filter( $tag, $value );
-    }
-    
+function wpbody_content_filter( $content ) {
+    return strtoupper( $content );
 }
+add_filter( 'the_content', 'wpbody_content_filter' );
 
 ?>
