@@ -2,19 +2,19 @@
 
 /**
  * @package    WPbody.com
- * @subpackage WPbody.com/Snippets
+ * @subpackage WPbody/Snippets
  * @author     Anass Rahou <contacto@wpbody.com>
  */
 
 // Llamar al $tag y engancharlo en el hook de loggin_errors
-add_filter( 'login_errors', 'login_error_message' );
+add_filter( 'login_errors', 'wpbody_mensaje_error' );
 
 /**
  * Personalizar mensaje de error de acceso
  * @param  object    $error    Objeto que mensaje los errores
  * @return string              Mensaje de error a mostrar
  */
-function login_error_message( $error ) {
+function wpbody_mensaje_error( $error ) {
     /**
      * Llamar al objeto $errors
      */
@@ -22,12 +22,12 @@ function login_error_message( $error ) {
     /**
      * Averigua si existe algún error 
      */
-    $wpb_error = $errors->get_error_code();
-    if( $wpb_error ) {
-        $error_mensaje = __( '¡Favor verifique los datos de acceso!', 'textdomain' );;
+    $wpbody_error = $errors->get_error_code();
+    if( $wpbody_error ) {
+        $wpbody_error_mensaje = __( '¡Favor verifique los datos de acceso!', 'textdomain' );;
     }
     // Mensaje a mostrar en caso de equivocase
-    return $error_mensaje;
+    return $wpbody_error_mensaje;
 }
 
 ?>
