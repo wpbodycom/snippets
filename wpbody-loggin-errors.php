@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * @package    WPbody.com
+ * @subpackage WPbody.com/Snippets
+ * @author     Anass Rahou <contacto@wpbody.com>
+ */
+
 // Llamar al $tag y engancharlo en el hook de loggin_errors
 add_filter( 'login_errors', 'login_error_message' );
 
