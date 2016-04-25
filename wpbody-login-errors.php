@@ -24,7 +24,7 @@ function wpbody_mensaje_error( $error ) {
      */
     $wpbody_error = $errors->get_error_code();
     if( $wpbody_error ) {
-        $wpbody_error_mensaje = __( '¡Favor verifique los datos de acceso!', 'textdomain' );;
+        $wpbody_error_mensaje = __( '¡Favor verifique los datos de acceso!', 'textdomain' );
     }
     // Mensaje a mostrar en caso de equivocase
     return $wpbody_error_mensaje;
