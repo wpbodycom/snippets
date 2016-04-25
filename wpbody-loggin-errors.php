@@ -1,26 +1,22 @@
 <?php
 
 /**
- * Call the $tag with the loggin_errors hook
+ * Call The $tag With The loggin_errors Hook
  */
 add_filter( 'login_errors', 'login_error_message' );
-
 function login_error_message( $error ) {
     /**
-     * Call the Object errors 
+     * Call $errors Object
      */
     global $errors;
     /**
-     * Prepare the error message that will be displayed
-     * to the user attempting to access
+     * Call The Current Error, If Exists 
      */
-    $wpb_error = ucwords( str_replace( '_', ' ', $errors->get_error_code() ) );
-    $error = __( $wpb_error, 'textdomain' );
+    $wpb_error = $errors->get_error_code();
     if( $errors->get_error_code() ) {
-        $error;
+        $error_mensaje = __( '¡Favor verifique los datos de acceso!', 'textdomain' );;
     }
-    // Return the  displayed error message
-    return $error;
+    return $error_mensaje;
 }
 
 ?>
