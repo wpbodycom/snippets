@@ -1,6 +1,1 @@
-<?php
-
-// Silence
-echo 'Hello User!';
-
-?>
+<?php // Silence ?>
